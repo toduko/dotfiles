@@ -49,3 +49,4 @@ let g:airline#extensions#tabline#enabled = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:prettier#autoformat_require_pragma = 0
+Glaive codefmt clang_format_style='Google'
