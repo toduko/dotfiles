@@ -7,17 +7,20 @@ Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 Plug 'preservim/nerdtree'
 
 call plug#end()
-
+call glaive#Install()
 " Binds
 
 noremap <C-w> :w<CR>
 noremap <C-q> :q!<CR>
 noremap <C-x> :wq<CR>
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
-nmap <C-S-I> :call CocAction('runCommand', 'prettier.formatFile')<CR>
+nmap <C-S-I> :FormatCode<CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-j> :bp<CR>
@@ -45,3 +48,4 @@ set omnifunc=ale#completion#OmniFunc
 let g:airline#extensions#tabline#enabled = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
+let g:prettier#autoformat_require_pragma = 0
