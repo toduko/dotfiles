@@ -12,6 +12,7 @@ Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'preservim/nerdtree'
 Plug 'ziglang/zig.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 call glaive#Install()
