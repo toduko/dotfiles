@@ -99,3 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f "/home/todor/.ghcup/env" ] && source "/home/todor/.ghcup/env" # ghcup-env
