@@ -67,6 +67,7 @@ exec_always --no-startup-id "picom"
 
 # Windows margin and borders
 default_border pixel
+for_window [all] border pixel 2
 gaps inner 10
 gaps outer 5
 
