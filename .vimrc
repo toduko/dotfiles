@@ -23,7 +23,7 @@ noremap <C-q> :q!<CR>
 noremap <C-x> :wq<CR>
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 nmap <C-S-I> :FormatCode<CR>
-nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-g> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
