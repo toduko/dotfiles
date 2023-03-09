@@ -18,6 +18,11 @@ call plug#end()
 call glaive#Install()
 " Binds
 
+nnoremap <S-R> :set rnu!<CR>
+nnoremap J 5j
+nnoremap K 5k
+xnoremap J 5j
+xnoremap K 5k
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 nmap <C-S-I> :FormatCode<CR>
 nnoremap <C-g> :NERDTreeFocus<CR>
