@@ -18,26 +18,48 @@ call plug#end()
 call glaive#Install()
 " Binds
 
-nnoremap <S-R> :set rnu!<CR>
-nnoremap J 5j
-nnoremap K 5k
-xnoremap J 5j
-xnoremap K 5k
-nmap <silent> <C-e> <Plug>(ale_next_wrap)
-nmap <C-S-I> :FormatCode<CR>
-nnoremap <C-g> :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-j> :bp<CR>
-nnoremap <C-k> :bn<CR>
+inoremap <c-p> <esc>pa
+cnoremap <c-p> <c-r>"
+
+nnoremap vv ^vg_
+nnoremap Y y$
+
+nnoremap j gj
+nnoremap k gk
+xnoremap j gj
+xnoremap k gk
+
+nnoremap <s-r> :set rnu!<cr>
+
+nnoremap <silent> J 5j
+nnoremap <silent> K 5k
+xnoremap <silent> J 5j
+xnoremap <silent> K 5k
+
+nmap <silent> <c-e> <Plug>(ale_next_wrap)
+
+nmap <c-s-i> :FormatCode<cr>
+nnoremap <c-g> :NErDTreeFocus<cr>
+nnoremap <c-t> :NErDTreeToggle<cr>
+nnoremap <c-j> :bp<cr>
+nnoremap <c-k> :bn<cr>
+
 execute "set <xUp>=\e[1;*A"
 execute "set <xDown>=\e[1;*B"
-execute "set <xRight>=\e[1;*C"
+execute "set <xright>=\e[1;*C"
 execute "set <xLeft>=\e[1;*D"
+
+nnoremap ! :source %<cr>
 
 " General
 
+set wildmode=list:longest,full
 set background=dark
 set nocompatible
+set clipboard=unnamed,unnamedplus
+set ttimeout
+set ttimeoutlen=50
+set nrformats-=octal
 filetype on
 filetype plugin on
 filetype indent on
