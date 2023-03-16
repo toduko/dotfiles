@@ -16,6 +16,7 @@ Plug 'lervag/vimtex'
 
 call plug#end()
 call glaive#Install()
+
 " Binds
 
 inoremap <c-p> <esc>pa
@@ -29,6 +30,9 @@ nnoremap k gk
 xnoremap j gj
 xnoremap k gk
 
+nnoremap zj mayyp`aj
+nnoremap zk mayyP`ak
+
 nnoremap <s-r> :set rnu!<cr>
 
 nnoremap <silent> J 5j
@@ -39,7 +43,7 @@ xnoremap <silent> K 5k
 nmap <silent> <c-e> <Plug>(ale_next_wrap)
 
 nmap <c-s-i> :FormatCode<cr>
-nnoremap <c-g> :NErDTreeFocus<cr>
+nnoremap <c-g> :NERDTreeFocus<cr>
 nnoremap <c-t> :NErDTreeToggle<cr>
 nnoremap <c-j> :bp<cr>
 nnoremap <c-k> :bn<cr>
@@ -53,6 +57,9 @@ nnoremap ! :source %<cr>
 
 " General
 
+set nobackup
+set nowritebackup
+set noswapfile
 set wildmode=list:longest,full
 set background=dark
 set nocompatible
