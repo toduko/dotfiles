@@ -44,7 +44,7 @@ nmap <silent> <c-e> <Plug>(ale_next_wrap)
 
 nmap <c-s-i> :FormatCode<cr>
 nnoremap <c-g> :NERDTreeFocus<cr>
-nnoremap <c-t> :NErDTreeToggle<cr>
+nnoremap <c-t> :NERDTreeToggle<cr>
 nnoremap <c-j> :bp<cr>
 nnoremap <c-k> :bn<cr>
 
