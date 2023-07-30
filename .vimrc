@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
+Plug 'xianzhon/vim-code-runner'
 
 call plug#end()
 
@@ -93,3 +94,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:prettier#autoformat_require_pragma = 0
+let g:CodeRunnerCommandMap = {
+      \ 'python' : 'python $fileName',
+      \ 'c' : 'gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt',
+      \ 'cpp' : 'g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt',
+      \ 'haskell' : 'runhaskell $fileName',
+      \ 'javascript' : 'node $fileName',
+      \}
+let g:code_runner_output_window_size = 10
