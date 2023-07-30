@@ -21,6 +21,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
