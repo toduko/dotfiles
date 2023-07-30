@@ -13,18 +13,15 @@ Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
 Plug 'preservim/nerdtree'
 Plug 'ziglang/zig.vim'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-autoformat/vim-autoformat'
 
 call plug#end()
-call glaive#Install()
 
 " Binds
 
@@ -51,7 +48,7 @@ xnoremap <silent> K 5k
 
 nmap <silent> <c-e> <Plug>(ale_next_wrap)
 
-nmap <c-s-i> :FormatCode<cr>
+nmap <c-s-i> :Autoformat<cr>
 nnoremap <c-g> :NERDTreeFocus<cr>
 nnoremap <c-t> :NERDTreeToggle<cr>
 nnoremap <c-j> :bp<cr>
@@ -86,9 +83,11 @@ set tabstop=2
 set expandtab
 set nowrap
 colorscheme space_vim_theme
+
+" Plugin settings
+
 set omnifunc=ale#completion#OmniFunc
 let g:airline#extensions#tabline#enabled = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:prettier#autoformat_require_pragma = 0
-Glaive codefmt clang_format_style='Google'
