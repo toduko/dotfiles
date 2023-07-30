@@ -19,6 +19,9 @@ Plug 'google/vim-glaive'
 Plug 'preservim/nerdtree'
 Plug 'ziglang/zig.vim'
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 call glaive#Install()
