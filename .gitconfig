@@ -7,3 +7,5 @@
 [user]
 	email = teddyepich@gmail.com
 	name = toduko
+[push]
+	followTags = true
