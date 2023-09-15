@@ -3,13 +3,19 @@
 
 # Except
 !.gitignore
+!.gitconfig
+!.gitmodules
+
 !.config/alacritty
 !.config/i3
 !.config/picom
 !.config/polybar
 !.config/rofi
-!.zsh/
-!.gitconfig
-!.gitmodules
+
 !.vimrc
+
+!.zsh/
 !.zshrc
+!.zprofile
+
+!scripts/
