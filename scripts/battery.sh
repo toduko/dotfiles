@@ -9,7 +9,7 @@ do
   CAPACITY=$(cat $BATTERY_INFO_DIRECTORY/capacity)
   STATUS=$(cat $BATTERY_INFO_DIRECTORY/status)
 
-  if [[ $CAPACITY -lt $LOW_BATTERY_THRESHHOLD && $STATUS == "Discharging" ]] ; then
+  if [[ $CAPACITY -le $LOW_BATTERY_THRESHHOLD && $STATUS == "Discharging" ]] ; then
     DISPLAY=:0.0 /usr/bin/notify-send "LOW BATTERY!!!" "Only $CAPACITY% left."
   fi
 
