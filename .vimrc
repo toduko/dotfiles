@@ -85,6 +85,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set nowrap
+let g:filetype_pl="prolog"
 colorscheme space_vim_theme
 
 " Plugin settings
