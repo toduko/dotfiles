@@ -101,5 +101,6 @@ let g:CodeRunnerCommandMap = {
       \ 'cpp' : 'g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt',
       \ 'haskell' : 'runhaskell $fileName',
       \ 'javascript' : 'node $fileName',
+      \ 'prolog' : 'swipl $fileName',
       \}
 let g:code_runner_output_window_size = 10
