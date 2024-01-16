@@ -104,3 +104,5 @@ let g:CodeRunnerCommandMap = {
       \ 'prolog' : 'swipl $fileName',
       \}
 let g:code_runner_output_window_size = 10
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
