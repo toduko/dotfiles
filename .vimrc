@@ -106,3 +106,14 @@ let g:CodeRunnerCommandMap = {
 let g:code_runner_output_window_size = 10
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+let g:vimtex_compiler_latexmk = {
+        \ 'options' : [
+        \   '-shell-escape' ,
+        \   '-verbose' ,
+        \   '-file-line-error',
+        \   '-synctex=1' ,
+        \   '-interaction=nonstopmode' ,
+        \ ],
+        \}
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_view_method = 'zathura'
