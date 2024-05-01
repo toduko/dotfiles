@@ -23,6 +23,7 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
 Plug 'xianzhon/vim-code-runner'
+Plug 'arthurxavierx/vim-unicoder'
 
 call plug#end()
 
