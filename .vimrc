@@ -24,6 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
 Plug 'xianzhon/vim-code-runner'
 Plug 'arthurxavierx/vim-unicoder'
+Plug 'jamespeapen/Nvim-R'
 
 call plug#end()
 
