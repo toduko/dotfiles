@@ -90,6 +90,11 @@ set nowrap
 let g:filetype_pl="prolog"
 colorscheme space_vim_theme
 
+augroup window
+  autocmd!
+  autocmd WinNew * wincmd L
+augroup END
+
 " Plugin settings
 
 set omnifunc=ale#completion#OmniFunc
