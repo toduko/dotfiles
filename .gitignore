@@ -11,6 +11,7 @@
 !.config/picom
 !.config/polybar
 !.config/rofi
+!.config/sway
 
 !.vimrc
 

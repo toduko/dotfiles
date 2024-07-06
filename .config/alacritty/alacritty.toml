@@ -33,7 +33,7 @@ family = "JetBrains Mono"
 style = "Regular"
 
 [window]
-opacity = 0.8
+opacity = 1
 
 [window.padding]
 x = 10
