@@ -175,7 +175,7 @@
         "format-icons": {
           "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "custom/media": {
       "format": "{icon} {}",
