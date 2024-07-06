@@ -230,4 +230,9 @@ default_border pixel 3
 default_floating_border pixel 3
 gaps inner 15
 
+#
+# Notifications:
+#
+exec swaync
+
 include /etc/sway/config.d/*
