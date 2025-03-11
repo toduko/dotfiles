@@ -8,11 +8,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'liuchengxu/space-vim-theme'
-Plug 'dense-analysis/ale'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch' : 'release'}
 Plug 'preservim/nerdtree'
 Plug 'ziglang/zig.vim'
 Plug 'lervag/vimtex'
@@ -25,6 +21,11 @@ Plug 'kien/ctrlp.vim'
 Plug 'xianzhon/vim-code-runner'
 Plug 'arthurxavierx/vim-unicoder'
 Plug 'jamespeapen/Nvim-R'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
+Plug 'sphamba/smear-cursor.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
@@ -50,8 +51,6 @@ nnoremap <silent> J 5j
 nnoremap <silent> K 5k
 xnoremap <silent> J 5j
 xnoremap <silent> K 5k
-
-nmap <silent> <c-e> <Plug>(ale_next_wrap)
 
 nmap <c-s-i> :Autoformat<cr>
 nnoremap <c-g> :NERDTreeFocus<cr>
@@ -87,8 +86,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set nowrap
-let g:filetype_pl="prolog"
-colorscheme space_vim_theme
+colorscheme catppuccin-mocha
 
 augroup window
   autocmd!
@@ -97,10 +95,7 @@ augroup END
 
 " Plugin settings
 
-set omnifunc=ale#completion#OmniFunc
 let g:airline#extensions#tabline#enabled = 1
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
 let g:prettier#autoformat_require_pragma = 0
 let g:CodeRunnerCommandMap = {
       \ 'python' : 'python $fileName',
@@ -112,15 +107,20 @@ let g:CodeRunnerCommandMap = {
       \}
 let g:code_runner_output_window_size = 10
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 let g:vimtex_compiler_latexmk = {
-        \ 'options' : [
-        \   '-shell-escape' ,
-        \   '-verbose' ,
-        \   '-file-line-error',
-        \   '-synctex=1' ,
-        \   '-interaction=nonstopmode' ,
-        \ ],
-        \}
+      \ 'options' : [
+      \   '-shell-escape' ,
+      \   '-verbose' ,
+      \   '-file-line-error',
+      \   '-synctex=1' ,
+      \   '-interaction=nonstopmode' ,
+      \ ],
+      \}
 let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_view_method = 'zathura'
+lua << END
+require('lualine').setup()
+require('smear_cursor').enabled = true
+require'nvim-treesitter.configs'.setup{highlight={enable=true},indent={enable=true}}
+END

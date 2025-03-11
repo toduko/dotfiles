@@ -10,8 +10,7 @@
 !.config/sway
 !.config/waybar
 !.config/fuzzel
-
-!.vimrc
+!.config/nvim
 
 !.zsh/
 !.zshrc
