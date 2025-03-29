@@ -6,11 +6,11 @@
 !.gitconfig
 !.gitmodules
 
-!.config/alacritty
-!.config/sway
-!.config/waybar
-!.config/fuzzel
-!.config/nvim
+!.config/alacritty/
+!.config/sway/
+!.config/waybar/
+!.config/fuzzel/
+!.config/nvim/
 
 !.zsh/
 !.zshrc
