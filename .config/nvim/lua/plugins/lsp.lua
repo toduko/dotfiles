@@ -7,3 +7,7 @@ lsp.lua_ls.setup({
   end,
   capabilities = capabilities
 })
+
+lsp.ccls.setup({
+  capabilities = capabilities
+})
