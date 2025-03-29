@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BATTERY_INFO_DIRECTORY=/sys/class/power_supply/BAT0
+BATTERY_INFO_DIRECTORY=/sys/class/power_supply/*
 LOW_BATTERY_THRESHHOLD=15 # in percentage
 SLEEP_TIME=300 # in seconds
 
