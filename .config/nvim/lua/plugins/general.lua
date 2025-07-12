@@ -2,7 +2,7 @@ vim.g.CodeRunnerCommandMap = {
   python = 'python $fileName',
   c = 'gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt',
   cpp = 'g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt',
-  haskell = 'runhaskell $fileName',
+  haskell = 'ghci $fileName',
   javascript = 'node $fileName',
   prolog = 'swipl $fileName',
 }
