@@ -11,3 +11,7 @@ lsp.lua_ls.setup({
 lsp.ccls.setup({
   capabilities = capabilities
 })
+
+lsp.texlab.setup({
+  capabilities = capabilities
+})
