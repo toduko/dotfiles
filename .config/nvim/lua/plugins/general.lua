@@ -7,6 +7,7 @@ vim.g.CodeRunnerCommandMap = {
   prolog = 'swipl $fileName',
 }
 vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_quickfix_open_on_warning = 0
 vim.diagnostic.config({
   virtual_text = true
 })
