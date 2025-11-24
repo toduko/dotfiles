@@ -6,6 +6,7 @@ vim.g.CodeRunnerCommandMap = {
   javascript = 'node $fileName',
   prolog = 'swipl $fileName',
 }
+vim.g.filetype_pl = 'prolog'
 vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_quickfix_open_on_warning = 0
 vim.diagnostic.config({
