@@ -19,7 +19,7 @@ nnoremap <silent> K 5k
 xnoremap <silent> J 5j
 xnoremap <silent> K 5k
 
-nmap <c-s-i> :lua vim.lsp.buf.format()<cr>
+nmap <c-s-i> :lua require("conform").format()<cr>
 nnoremap <c-g> :NvimTreeFocus<cr>
 nnoremap <c-j> :bp<cr>
 nnoremap <c-k> :bn<cr>

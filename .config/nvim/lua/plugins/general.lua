@@ -28,4 +28,9 @@ require("nvim-tree").setup({
   },
 })
 require('smear_cursor').enabled = true
+require('conform').setup({
+  formatters_by_ft = {
+    prolog = { "prolog" }
+  }
+})
 require'nvim-treesitter.configs'.setup({highlight={enable=true},indent={enable=true}})

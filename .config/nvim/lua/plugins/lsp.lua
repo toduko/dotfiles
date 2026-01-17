@@ -1,17 +1,25 @@
-local lsp = require 'lspconfig'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lsp.lua_ls.setup({
+vim.lsp.config('lua_ls', {
   root_dir = function(fname)
     return vim.fn.getcwd()
   end,
   capabilities = capabilities
 })
 
-lsp.ccls.setup({
+vim.lsp.config('ccls', {
   capabilities = capabilities
 })
 
-lsp.texlab.setup({
+vim.lsp.config('texlab', {
   capabilities = capabilities
 })
+
+vim.lsp.config('prolog_ls', {
+  capabilities = capabilities
+})
+
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('ccls')
+vim.lsp.enable('texlab')
+vim.lsp.enable('prolog_ls')

@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', { 'branch' : 'release'}
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
@@ -27,5 +26,6 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'lervag/vimtex'
+Plug 'stevearc/conform.nvim'
 
 call plug#end()
